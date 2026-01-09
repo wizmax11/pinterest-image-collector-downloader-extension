@@ -1,0 +1,36 @@
+.pc-collector-btn {
+  position: absolute !important;
+  top: 10px !important;
+  right: 10px !important;
+  width: 36px !important;
+  height: 36px !important;
+  background: #E8D5C4 !important;
+  border: 3px solid #8B6F47 !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  z-index: 999999 !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.3) !important;
+  opacity: 0.95 !important;
+  font-family: 'Comic Sans MS', cursive !important;
+}
+
+.pc-collector-btn:hover {
+  background: #C9A88A !important;
+  transform: scale(1.15) !important;
+  opacity: 1 !important;
+  box-shadow: 0 5px 12px rgba(0,0,0,0.4) !important;
+}
+
+.pc-collector-btn.pc-collected {
+  background: #5C9B5C !important;
+  border-color: #4A8A4A !important;
+}
+
+.pc-collector-btn.pc-collected:hover {
+  background: #4A8A4A !important;
+  transform: scale(1.15) rotate(15deg) !important;
+}

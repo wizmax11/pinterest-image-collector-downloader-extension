@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      width: 340px;
+      padding: 20px;
+      font-family: 'Comic Sans MS', cursive;
+      background: #E8D5C4;
+      color: #5C4033;
+    }
+    
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 15px;
+      gap: 10px;
+    }
+    
+    .header img, .icon-placeholder {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 2px solid #8B6F47;
+      background: #C9A88A url('icon.png') center/cover no-repeat;
+    }
+    
+    h2 {
+      margin: 0;
+      color: #8B6F47;
+    }
+    
+    .status {
+      padding: 15px;
+      background: #F5EBE0;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      text-align: center;
+      border: 2px solid #D4C4B0;
+    }
+    
+    .count {
+      font-size: 28px;
+      font-weight: bold;
+      color: #8B6F47;
+      display: block;
+      margin-top: 5px;
+    }
+    
+    button {
+      width: 100%;
+      padding: 14px;
+      margin: 8px 0;
+      font-family: 'Comic Sans MS', cursive;
+      font-size: 15px;
+      background: #C9A88A;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-weight: bold;
+    }
+    
+    button:hover {
+      background: #B89878;
+      transform: translateY(-2px);
+    }
+    
+    button:active {
+      transform: translateY(0);
+    }
+    
+    button:disabled {
+      background: #D4C4B0;
+      cursor: not-allowed;
+      transform: none;
+    }
+    
+    .toggle {
+      background: #8B6F47;
+    }
+    
+    .toggle:hover {
+      background: #6F5838;
+    }
+    
+    .toggle.active {
+      background: #5C9B5C;
+    }
+    
+    .toggle.active:hover {
+      background: #4A8A4A;
+    }
+    
+    .info {
+      font-size: 12px;
+      text-align: center;
+      color: #8B6F47;
+      margin-top: 10px;
+      padding: 10px;
+      background: #F5EBE0;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+      <div class="header">
+    <div class="icon-placeholder"></div>
+    <h2>Pinterest Collector</h2>
+  </div>
+  
+  <div class="status">
+    <div>Images in Bucket</div>
+    <span class="count" id="count">0</span>
+  </div>
+  
+  <button id="toggle" class="toggle">Turn On Collector</button>
+  <button id="download" disabled>Download All Images</button>
+  <button id="clear">Clear Bucket</button>
+  
+  <div class="info" id="info">Visit Pinterest and turn on the collector!</div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "Pinterest Image Collector",
+  "version": "1.0",
+  "description": "Collect and download Pinterest images easily",
+  "permissions": ["storage", "downloads", "activeTab"],
+  "host_permissions": ["*://*.pinimg.com/*", "*://*.pinterest.com/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.pinterest.com/*", "*://*.pinterest.ca/*", "*://*.pinterest.co.uk/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["icon.png"],
+      "matches": ["*://*.pinterest.com/*", "*://*.pinterest.ca/*", "*://*.pinterest.co.uk/*"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  }
+}
